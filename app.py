@@ -6,7 +6,7 @@ try:
   genai.configure(api_key=key)
   model = genai.GenerativeModel('gemini-2.0-flash-lite')
 
-  if "chat" not in st.sesstion_state:
+  if "chat" not in st.session_state:
     st.session_state.chat = model.start_chat(history=[])
   st.title('Gemini Pro Test')
 
